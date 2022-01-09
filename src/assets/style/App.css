@@ -12,16 +12,16 @@
     width: 100%;
 }
 
+body{
+    background: linear-gradient(#5584AC, #95D1CC, #F6F2D4 );
+    min-height: 100vh;
+}
+
 a{
     color: inherit;
 }
 
 /***************HEADER***************/
-
-.header__weather{
-    background: linear-gradient(#5584AC, #95D1CC, #F6F2D4 );
-    height: 100vh;
-}
 
 .header__weather_logo{
     background-color: #1D2D50;
@@ -39,22 +39,35 @@ a{
     font-size: 30px;
 }
 
-.header__form{
-    width: 30%;
-    height: 200px;
-    background-image: url("../images/sky.jpeg");
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 50px auto;
-    position: absolute;
-    left: 0;
-    right: 0;
-    top: 50%;
-    transform: translate(0, -50%);
-    border-radius: 15px;
+.header__title_form{
+    font-size: 24px;
+    text-align: center;
+    margin-bottom: 15px;
 }
 
+.header__form{
+    width: 30%;
+    height: 300px;
+    margin: 200px auto;
+    border-radius: 15px;
+    align-items: center;
+    justify-content: space-between;
+    text-align: center;
+    line-height: 40px;
+}
+
+.header__form_another{
+    position: absolute;
+    height: 50px;
+    left: 0;
+    right: 0;
+    padding-top: 4px;
+}
+
+.picture__img{
+    width: 200px;
+    height: 170px;
+}
 
 .header__input{
     width: 300px;
@@ -122,14 +135,13 @@ a{
 /***************MAIN***************/
 
 .main__weather{
-    background: linear-gradient(#5584AC, #95D1CC, #F6F2D4 );
-    height: 100vh;
+    min-height: 100vh;
     padding-top: 12px;
 }
 
 .main__aside{
     width: 320px;
-    height: 300px;
+    height: 415px;
     float: right;
     background-color: #fff;
     border-radius: 6px;
@@ -137,8 +149,39 @@ a{
     padding: 20px;
 }
 
+.aside__cards_name{
+    padding-bottom: 10px;
+}
+
 .aside__info{
     font-size: 40px;
+    line-height: 40px;
+    padding-bottom: 10px;
+}
+
+.air__level_img{
+    width: 55px;
+    height: 55px;
+    margin-bottom: -7px;
+    margin-right: 5px;
+}
+
+.aside__grid{
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+  justify-content: space-between;
+}
+
+.aside__grid_info{
+    display: flex;
+    justify-content: space-between;
+    font-size: 16px;
+    line-height: 30px;
+}
+
+.aside__grid_border{
+    border-bottom: 1px solid;
 }
 
 .main__grid{
@@ -224,7 +267,8 @@ a{
 }
 
 .second__cards_img{
-    width: 40px;
+    width: 55px;
+    height: 55px;
 }
 
 .second__grid_btn{
@@ -270,6 +314,55 @@ a{
     display: flex;
     font-size: 18px;
     padding: 5px 0;
+}
+
+.fourth__card_grid{
+    margin-top: 10px;
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 20px;
+}
+
+.fourth__card_img{
+    width: 35px;
+    height: 35px;
+    margin-right: 10px;
+}
+
+/***************HOURLY***************/
+
+.forecast__card{
+    background-color: #fff;
+    border-radius: 10px;
+    margin: 12px auto;
+    padding: 25px;
+    width: 80%;
+    justify-content: space-between;
+}
+
+.forecast__grid{
+    margin-top: 10px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    border-bottom: 1px solid;
+    align-items: center;
+    text-align: center;
+}
+
+.forecast__info{
+    font-size: 16px;
+}
+
+.forecast__temp{
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.forecast__img{
+    width: 50px;
+    height: 50px;
 }
 
 
