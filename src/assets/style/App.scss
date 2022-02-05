@@ -28,6 +28,7 @@ a{
 }
 
 .header__inner{
+   min-width: 100%;
     height: 80px;
     padding: 40px 0;
     display: flex;
@@ -54,6 +55,7 @@ a{
     justify-content: space-between;
     text-align: center;
     line-height: 40px;
+    position: relative;
 }
 
 .header__form_another{
@@ -62,6 +64,7 @@ a{
     left: 0;
     right: 0;
     padding-top: 4px;
+    
 }
 
 .picture__img{
@@ -100,32 +103,27 @@ a{
 
 /***************NAV***************/
 
-.nav__weather{
+.nav{
     background-color: #22577E;
-}
-
-.nav__inner{
-    height: 40px;
-    padding: 20px 0;
-    display: flex;
-    align-items: center;
-    color: #fff;
-
-}
-
-.nav__menu{
-    list-style: none;
-}
-
-.nav__item {
-    display: inline;
-    margin: 0 40px;
-    font-size: 18px;
-    cursor: pointer;
-}
-
-.nav__item :hover{
-    border-bottom: solid 3px #485d96;
+    &__inner{
+        height: 40px;
+        padding: 20px 0;
+        display: flex;
+        align-items: center;
+        color: #fff;   
+    }
+    &__menu{
+        list-style: none;
+    }
+    &__item {
+        display: inline;
+        margin: 0 40px;
+        font-size: 18px;
+        cursor: pointer;
+    }
+    &__item :hover{
+        border-bottom: solid 3px #485d96;
+    }
 }
 
 .a__item{
@@ -134,9 +132,10 @@ a{
 
 /***************MAIN***************/
 
-.main__weather{
+.main{
     min-height: 100vh;
-    padding-top: 12px;
+    margin: 12px 0 12px;
+    position: relative;
 }
 
 .main__aside{
@@ -198,6 +197,7 @@ a{
     border-radius: 6px;
     box-shadow: 0 0 10px 0 #485d96;
     padding: 25px;
+    position: relative;
 }
 
 .first__cards{
@@ -316,6 +316,10 @@ a{
     padding: 5px 0;
 }
 
+.third__grid__info_moonphase{
+    text-align: right;
+}
+
 .fourth__card_grid{
     margin-top: 10px;
     display: grid;
@@ -364,6 +368,236 @@ a{
     width: 50px;
     height: 50px;
 }
+
+/***************ABOUT***************/
+
+.about{
+    display: flex;
+}
+
+.about__weather{
+    text-align: center;
+    margin-top: 100px;
+}
+
+.about__title{
+    font-size: 24px;
+    text-align: center;
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+
+.about__title_span{
+    font-style: italic;
+    font-weight: 400;
+}
+
+.about__ul{
+    text-align: left;
+    font-size: 18px;
+    line-height: 32px;
+    margin-top: 37px;
+    list-style: none;
+}
+
+.pin__img{
+    width: 3%;
+   
+}
+
+/***************ADAPTIVE***************/
+
+@media (max-width: 991px){
+    .container{
+        max-width: 961px;
+    }
+    .header__form {
+        width: 41%;
+    }
+    .main__cards {
+        padding: 15px;
+    }
+}
+
+@media (max-width: 767px){
+    body {
+        background: #95D1CC;
+    }
+    .container{
+        max-width: 737px;
+    }
+    .header__input {
+        width: 223px;
+    }
+    .header__btn {
+        width: 68px;
+    }
+    .header__title_form {
+        font-size: 20px;
+    }
+    .third__grid {
+        margin-top: 5px;
+    }
+    .main__aside {
+        bottom: -427px;
+        position: absolute;
+        margin-left: 0;
+    }
+}
+
+@media (max-width: 480px){
+    .container{
+        max-width: 450px;
+    }
+    .header__title {
+        font-size: 21px;
+    }
+    .header__form {
+        min-width: 103%;
+    }
+
+    .header__form_another{
+        min-width: 100%;
+        right: -56px;
+    }
+    .header__input {
+        width: 160px;
+        padding: 0 5px;
+    }
+    .header__btn {
+        padding: 0 5px;
+    }
+    .picture__img {
+        width: 161px;
+        height: 150px;
+    }
+    .header__title_form {
+        line-height: 30px;
+    }
+
+    .nav__item {
+        margin: 0 13px;
+        font-size: 16px;
+    }
+    .main__grid{
+        grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+    }
+    .cards__temp {
+        font-size: 72px;
+    }
+    .second__grid_title {
+        font-size: 18px;
+    }
+    .second__grid_temp {
+        font-size: 27px;
+    }
+    .cards__feels {
+        font-size: 33px;
+    }
+    .fourth__cards{
+        height: 420px;
+    }
+    .fourth__card_grid{
+        grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+    }
+    .forecast__card {
+        padding: 10px;
+        width: 88%;
+    }
+}
+
+@media (max-width: 320px){
+    .container{
+        max-width: 291px;
+    }
+    .picture__img {
+        width: 131px;
+        height: 134px;
+    }
+    .header__form {
+        min-width: 80%;
+    }
+    .header__inner {
+        height: 120px;
+        padding: 15px 0;
+    }
+    .header__input {
+        height: 35px;
+    }
+    .header__btn {
+        height: 35px;
+    }
+    .header__title {
+        position: absolute;
+        top: 21px;
+        left: 109px;
+    }
+    .header__title_form {
+        line-height: 26px;
+        font-size: 17px;
+    }
+    .header__form_another {
+        height: 3px;
+        right: 8px
+    }
+    .nav__inner {
+        height: 59px;
+        padding: 14px 0;
+    }
+    .nav__item {
+        margin: 0 34px;
+    }
+    .cards__temp {
+        font-size: 47px;
+    }
+    .cards__name {
+        font-size: 19px;
+    }
+    .second__cards{
+        height: 353px;
+    }
+    .second__cards_grid{
+        grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    }
+    .second__grid_border {
+        border-right: none;
+    }
+    .third__card_grid{
+        grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    }
+    .third__cards{
+        height: 332px;
+    }
+    .fourth__cards{
+        height: 445px;
+    }
+    .main__aside {
+        width: 269px;
+        padding: 14px;
+    }
+    .aside__info {
+        font-size: 35px;
+    }
+    .aside__grid_info {
+        font-size: 15px;
+    }
+    .forecast__card {
+        padding: 5px;
+        width: 98%;
+    }
+    .about__title {
+        font-size: 20px;
+    }
+    .about__ul {
+        font-size: 16px;
+    }
+}
+
+
+
+
+
+
 
 
 
