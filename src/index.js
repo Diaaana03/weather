@@ -1,3 +1,5 @@
+const PORT = pricess.env.PORT || 5000;
+
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.scss';
